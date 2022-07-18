@@ -14,7 +14,8 @@ from time import sleep
 
 with webdriver.Chrome() as browser:
     browser.get('http://parsinger.ru/window_size/1/')
-    browser.set_window_size(width=555, height=675)
+ #   browser.set_window_size(width=555, height=675)
+    browser.set_window_size(width=555+12, height=555+128)
     print(browser.find_element(By.ID, 'result').text)
     sleep(3)
 

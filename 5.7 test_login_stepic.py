@@ -6,7 +6,6 @@ from selenium.webdriver.common.keys import Keys
 from auth_data import stepik_login, stepik_pswd
 
 ua = UserAgent()
-
 options = webdriver.ChromeOptions()
 options.add_argument(f'user-agent={ua.random}')
 
@@ -20,6 +19,7 @@ with webdriver.Chrome(options=options) as step_driver:
 
     login.send_keys(stepik_login)
     sleep(1)
+
     password.send_keys(stepik_pswd)
     sleep(1)
     password.send_keys(Keys.ENTER)
